@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.5.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.hxcloudpan</groupId>
+	<artifactId>hxcloudpan</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>hxcloudpan</name>
+	
+	 <modules>
+        <module>hxcloudpan-dao</module>
+        <module>hxcloudpan-web</module>
+    </modules>
+    
+     <dependencies>
+    	<!-- 集成ORM habernate ↓ -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- 集成ORM habernate ↑ -->
+				<!-- Oracle数据库驱动 ↓ -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.esen.jdbc</groupId>
+			<artifactId>oracle_ojdbc6</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<!-- Oracle数据库驱动 ↑ -->
+
+		<!-- MySql数据库驱动 ↓ -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- MySql数据库驱动 ↑ -->
+	</dependencies>
+   
+</project>
